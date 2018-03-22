@@ -1,0 +1,81 @@
+﻿<Window x:Class="CarputerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:CarputerWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Name="mainGrid" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://siteoforigin:,,,/Zyzman-bg.png"/>
+        </Grid.Background>
+        <Image x:Name="lightAndHorn" Width="110" Height="89" Margin="19,500,895,11" Stretch="Fill" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-light-and-horn.png" MouseUp="ActionButton_MouseUp"/>
+        <Image x:Name="light" HorizontalAlignment="Left" Height="89" Margin="161,500,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-light.png" Stretch="Fill" MouseUp="ActionButton_MouseUp"/>
+        <Image x:Name="orangeLight" HorizontalAlignment="Left" Height="89" Margin="303,500,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-orange-light.png" Stretch="Fill" MouseUp="ActionButton_MouseUp"/>
+        <Image x:Name="stop" HorizontalAlignment="Left" Height="89" Margin="445,500,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-stop.png" Stretch="Fill" MouseUp="ActionButton_MouseUp"/>
+        <Image x:Name="car" HorizontalAlignment="Left" Height="89" Margin="628,500,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-car.png" Stretch="Fill" MouseUp="ViewButton_MouseUp"/>
+        <Image x:Name="cam" HorizontalAlignment="Left" Height="89" Margin="765,500,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-cam.png" Stretch="Fill" MouseUp="ViewButton_MouseUp"/>
+        <Image x:Name="nav" HorizontalAlignment="Left" Height="89" Margin="902,500,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-nav.png" Stretch="Fill" MouseUp="ViewButton_MouseUp"/>
+        <Image x:Name="question" HorizontalAlignment="Left" Height="89" Margin="902,340,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-question.png" Stretch="Fill" MouseUp="ViewButton_MouseUp"/>
+        <Image x:Name="message" HorizontalAlignment="Left" Height="89" Margin="902,236,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-message.png" Stretch="Fill" MouseUp="ViewButton_MouseUp"/>
+        <Image x:Name="media" HorizontalAlignment="Left" Height="89" Margin="902,132,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-media.png" Stretch="Fill" MouseUp="ViewButton_MouseUp"/>
+        <Image x:Name="con" HorizontalAlignment="Left" Height="89" Margin="902,28,0,0" VerticalAlignment="Top" Width="110" gif:ImageBehavior.AnimatedSource="pack://siteoforigin:,,,/button-wifi.png" Stretch="Fill" MouseUp="ViewButton_MouseUp"/>
+        <Image x:Name="exitBackground" HorizontalAlignment="Left" Height="90" Margin="-7,-6,0,0" VerticalAlignment="Top" Width="101" Source="pack://siteoforigin:,,,/button.png" Stretch="Fill" MouseUp="Exit_MouseUp"/>
+        <Image x:Name="exit" HorizontalAlignment="Left" Height="58" Margin="10,10,0,0" VerticalAlignment="Top" Width="68" Source="pack://siteoforigin:,,,/running-icon-white.png" MouseUp="Exit_MouseUp"/>
+        <Label x:Name="la_HHMM" Content="09:38" HorizontalAlignment="Left" Margin="897,440,0,0" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="28" Foreground="White" FontWeight="Bold" Height="42" Width="97"/>
+        <Label x:Name="la_SS" Content="35" HorizontalAlignment="Left" Margin="982,442,0,0" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="18" FontWeight="Bold" Foreground="Gray"/>
+        <TabControl Name="tabs" Background="Transparent" Margin="134,28,132,105" BorderBrush="#00ACACAC" BorderThickness="0" FontSize="1" Foreground="#00000000">
+            <TabItem Name="tab_Main" Background="#00000000" BorderBrush="#00ACACAC">
+                <StackPanel>
+                    <Label x:Name="la_CallSign" Content="ANROPSSIGNAL" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14"  Foreground="Gray" Margin="10,5,0,0"/>
+                    <Label x:Name="CallSign" Content="SA7AXD" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="30" FontWeight="Bold" Foreground="White" Margin="10,0,0,0"/>
+                    <Label x:Name="la_Dog" Content="HUND" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14"  Foreground="Gray" Margin="10,0,0,0"/>
+                    <Label x:Name="Dog" Content="Dalek" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="30" FontWeight="Bold" Foreground="White" Margin="10,0,0,0"/>
+                    <Label x:Name="la_Number" Content="NUMMER" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14"  Foreground="Gray" Margin="10,0,0,0"/>
+                    <Label x:Name="Number" Content="2 15-1127" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="30" FontWeight="Bold" Foreground="White" Margin="10,0,0,0"/>
+                    <Label x:Name="la_Extra" Content="EXTRA" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="14"  Foreground="Gray" Margin="10,0,0,0"/>
+                    <Label x:Name="Extra" Content="LNN924" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="30" FontWeight="Bold" Foreground="White" Margin="10,0,0,0"/>
+                    <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="179" Margin="160,-30,0,0" VerticalAlignment="Top" Width="226" Background="#4C000000"/>
+                    <Label x:Name="la_System" Content="System" HorizontalAlignment="Left" Margin="170,-180,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_Wifi" Content="Wifi" HorizontalAlignment="Left" Margin="170,-150,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_Systemtemp" Content="Systemtemp." HorizontalAlignment="Left" Margin="170,-120,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_Battery" Content="Batterinivå" HorizontalAlignment="Left" Margin="170,-90,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_GPS" Content="GPS" HorizontalAlignment="Left" Margin="170,-60,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_Bluetooth" Content="Bluetooth" HorizontalAlignment="Left" Margin="170,-30,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_System_Value" Content="N/A" HorizontalAlignment="Left" Margin="330,-180,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_Wifi_Value" Content="N/A" HorizontalAlignment="Left" Margin="330,-150,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_Systemtemp_Value" Content="N/A" HorizontalAlignment="Left" Margin="330,-120,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_Battery_Value" Content="N/A" HorizontalAlignment="Left" Margin="330,-90,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_GPS_Value" Content="N/A" HorizontalAlignment="Left" Margin="330,-60,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="la_Bluetooth_Value" Content="N/A" HorizontalAlignment="Left" Margin="330,-30,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Tahoma" FontWeight="Bold" FontSize="16"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="tab_Car" Background="#00000000" BorderBrush="#00ACACAC">
+                <Label Content="Car" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,67,0,0" FontSize="15"/>
+            </TabItem>
+            <TabItem Name="tab_Cam" Background="#00000000" BorderBrush="#00ACACAC">
+                <StackPanel>
+                    <Label Content="Cam" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,67,0,0" FontSize="15"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="tab_Nav" Background="#00000000" BorderBrush="#00ACACAC">
+                <Label Content="Nav" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,67,0,0" FontSize="15"/>
+            </TabItem>
+            <TabItem Name="tab_Question" Background="#00000000" BorderBrush="#00ACACAC">
+                <Label Content="Question" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,67,0,0" FontSize="15"/>
+            </TabItem>
+            <TabItem Name="tab_Message" Background="#00000000" BorderBrush="#00ACACAC">
+                <Label Content="Message" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,67,0,0" FontSize="15"/>
+            </TabItem>
+            <TabItem Name="tab_Media" Background="#00000000" BorderBrush="#00ACACAC">
+                <Label Content="Media" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,67,0,0" FontSize="15"/>
+            </TabItem>
+            <TabItem Name="tab_Con" Background="#00000000" BorderBrush="#00ACACAC">
+                <Label Content="Con" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,67,0,0" FontSize="15"/>
+            </TabItem>
+        </TabControl>
+        <Label x:Name="la_Title" Content="" HorizontalAlignment="Left" Height="24" Margin="134,12,0,0" VerticalAlignment="Top" Width="752" FontFamily="Tahoma" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Right" Padding="0,2,0,0" Background="#FFF1F5C6"/>
+    </Grid>
+</Window>
